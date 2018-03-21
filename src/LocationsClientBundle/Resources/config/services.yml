@@ -1,0 +1,17 @@
+services:
+  locations.client:
+    class: LocationsClientBundle\Services\LocationsClient
+    arguments:
+      - ~
+      - "@jms_serializer.serializer"
+
+  locations.client.guzzle:
+    class: LocationsClientBundle\Services\GuzzleWrapper
+    public: false
+    arguments:
+      - "@locations.guzzle"
+
+  locations.guzzle:
+    public: false
+    class: GuzzleHttp\Client
+

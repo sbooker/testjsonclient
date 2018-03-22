@@ -22,6 +22,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->enumNode('http_client')
+                ->isRequired()
                     ->values(['guzzle'])
                 ->end()
             ->end()

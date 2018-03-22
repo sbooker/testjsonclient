@@ -6,29 +6,29 @@ Acceptance criteria
 3. Properly defined exceptions should be thrown on CURL errors, malformed JSON response and error JSON response;
 4. Resulting data should be fetched as an array (or other collection) of properly defined PHP objects.
 
-`
-JSON response format
-{
-   “data”: {
-       “locations”: [
-           {
-               “name”: “Eiffel Tower”,
-               “coordinates”: {
-                  “lat”: 21.12,
-                   “long”: 19.56
-               }
-           },
-           ...
-       ]
-   },
-   “success”: true
-}
-JSON error response format
-{
-   “data”: {
-       “message”: <string error message>,
-       “code”: <string error code>
-   },
-   “success”: false
-}
-`
+    
+    JSON response format
+    {
+        “data”: {
+            “locations”: [
+                {
+                    “name”: “Eiffel Tower”,
+                    “coordinates”: {
+                       “lat”: 21.12,
+                        “long”: 19.56
+                    }
+                },
+                ...
+            ]
+        },
+        “success”: true
+    }
+    JSON error response format
+    {
+        “data”: {
+            “message”: <string error message>,
+            “code”: <string error code>
+        },
+        “success”: false
+    }
+    

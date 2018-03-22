@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LocationsClientBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -26,6 +27,6 @@ class LocationsClientExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $def = $container->getDefinition('locations.client');
-        $def->setArgument(0, new Reference('locations.client.' . $config['http_client']));
+        $def->replaceArgument(0, new Reference('locations.client.' . $config['http_client']));
     }
 }

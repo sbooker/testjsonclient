@@ -10,12 +10,14 @@ class CoordinatesData
 {
     /**
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("lat")
      * @var string
      */
     private $latitude;
 
     /**
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("long")
      * @var string
      */
     private $longitude;
